@@ -18,7 +18,7 @@ random_sel_myNumber = random.randint(1,101)
 
 for number in range(1,7):
 
-	if clue_ind == "Y":
+	if clue_ind.upper() == "Y":
 		clue_ind = "N"
 		clue_over = "Yes"
 		continue
@@ -37,9 +37,9 @@ for number in range(1,7):
 			print ("Very close to the Value. Keep Try!!! \n")
 		#Clue
 			if (clue_over == "No") and (number < 5) :
-				clue_ind = input ("Want to see clue??? Y / N (Case Sensitive)")
-				if clue_ind == "Y":
-					print ("Your Number > mine!!!")
+				clue_ind = input ("Want to see clue??? Y / N")
+				if clue_ind.upper() == "Y":
+					print ("Your Number > mine!!!\n")
 		else:
 			print ("Too High!!!" + "\n")
 		continue
@@ -51,8 +51,8 @@ for number in range(1,7):
 		#Clue
 			if (clue_over == "No") and (number < 5) :
 				clue_ind = input ("Want to see clue??? Y / N ")
-				if clue_ind == "Y":
-					print ("Your Number < mine!!!")
+				if clue_ind.upper() == "Y":
+					print ("Your Number < mine!!!\n")
 
 		else:
 			print ("Too Low!!!" + "\n")
